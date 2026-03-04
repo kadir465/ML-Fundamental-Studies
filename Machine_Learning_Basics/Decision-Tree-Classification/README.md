@@ -1,27 +1,32 @@
-Decision Tree Classification with Iris Dataset
-Bu proje, Scikit-learn kütüphanesini kullanarak klasik Iris veri seti üzerinde bir Karar Ağacı (Decision Tree) sınıflandırıcısı eğitmek ve sonuçları görselleştirmek amacıyla hazırlanmıştır.
+# 🌿 Decision Tree Classification (Iris Dataset)
 
-Proje İçeriği
-Model: DecisionTreeClassifier (Gini kriteri ve derinlik sınırı: 5).
+Bu proje, **Scikit-learn** kütüphanesini kullanarak klasik Iris veri seti üzerinde bir Karar Ağacı (Decision Tree) sınıflandırıcısı eğitmek ve modelin karar mekanizmasını görselleştirmek amacıyla hazırlanmıştır.
 
-Veri Seti: Iris (Çiçek türü sınıflandırma).
+---
 
-Görselleştirme: - Modelin performansını gösteren Confusion Matrix (Karmaşıklık Matrisi).
+## 📊 Proje İçeriği
+* **Model:** `DecisionTreeClassifier` algoritması kullanılmıştır.
+* **Hiperparametreler:** Gini kriteri ve maksimum 5 derinlik sınırı (`max_depth=5`) belirlenmiştir.
+* **Veri Seti:** Iris çiçek türü sınıflandırma veri seti (Setosa, Versicolor, Virginica).
 
-Karar mekanizmasını açıklayan Decision Tree Diagram (Karar Ağacı Şeması).
 
-Gereksinimler
-Kodun çalışması için aşağıdaki kütüphanelerin yüklü olması gerekir:
+
+## 📈 Görselleştirme ve Çıktılar
+Kod çalıştırıldığında aşağıdaki analizleri otomatik olarak üretir:
+* **Karmaşıklık Matrisi (Confusion Matrix):** Modelin tahmin başarısını sınıf bazında gösterir.
+* **Karar Ağacı Şeması:** Algoritmanın hangi özelliklere (petal length, width vb.) göre karar verdiğini hiyerarşik olarak sunar.
+
+---
+
+## 🛠 Gereksinimler
+Projenin çalışması için gerekli kütüphaneleri aşağıdaki komutla yükleyebilirsiniz:
+
+```bash
 pip install scikit-learn matplotlib seaborn
 
+📂 Çıktı Dosyaları
+İşlem tamamlandığında modelin doğruluk (accuracy) değeri terminale basılır ve şu görseller kaydedilir:
 
-Kullanım
-Klasör içindeki scripti çalıştırmak için:
-python machine_learning_DT1.py
+confusion_matrix.png: Karmaşıklık matrisi grafiği.
 
-Sonuçlar
-Kod çalıştırıldığında modelin doğruluk (accuracy) değerini terminale basar ve aşağıdaki dosyaları çıktı olarak kaydeder:
-
-learn_DT0.png: Karmaşıklık matrisi grafiği.
-
-learn_DT1.png: Karar ağacı yapısının görsel şeması.
+tree_visualization.png: Karar ağacı yapısının görsel şeması.
